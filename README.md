@@ -69,6 +69,12 @@ file: `$event->files->forget('file_to_drop');`
 
 `$event->domain` is the scope of the files. This can be either styles, scripts or beforeCoreScripts
 
+## Install
+
+```bash
+composer require hollyit/filament-static-assets
+```
+
 ## One Note!
 
 To make all this possible, this package has to override the FilamentManager class provided by Filament. So If
