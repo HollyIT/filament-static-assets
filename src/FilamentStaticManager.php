@@ -17,7 +17,7 @@ class FilamentStaticManager extends FilamentManager
     public function prepareAssets($assets, $domain): array
     {
         $extension = $domain === 'styles' ? '.css' : '.js';
-        if (Request::route()?->getName() == 'filament.assets') {
+        if (Request::route()?->getName() == 'filament.asset') {
             return $assets;
         }
 
@@ -32,7 +32,7 @@ class FilamentStaticManager extends FilamentManager
                 return $path;
             }
 
-            $file = route('filament.assets', [
+            $file = route('filament.asset', [
                 'file' => $name .  $extension
             ]);
             if (isset($this->assetCache[$name])) {

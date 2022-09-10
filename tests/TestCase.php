@@ -17,7 +17,7 @@ class TestCase extends Orchestra
     {
         parent::setUp();
         $this->tempDir = __DIR__ . '/TempPublic';
-        Route::get('/assets/{file}', AssetController::class)->where('file', '.*')->name('filament.assets');
+        Route::get('/assets/{file}', AssetController::class)->where('file', '.*')->name('filament.asset');
         if (!is_dir($this->tempDir)) {
             mkdir($this->tempDir);
         }

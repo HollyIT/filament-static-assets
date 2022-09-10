@@ -47,7 +47,7 @@ it('deletes cached assets', function() {
 it('can retrieve files via asset controller', function(){
     $filament = app('filament');
     $filament->registerScripts(['test_script' => __DIR__ . '/Support/test.js']);
-    $this->get(route('filament.assets', ['file' => 'test_script.js']))->assertOk();
+    $this->get(route('filament.asset', ['file' => 'test_script.js']))->assertOk();
 });
 
 it('does not alter external items', function() {
