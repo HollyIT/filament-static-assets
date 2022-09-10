@@ -1,6 +1,6 @@
 {
     "name": "hollyit/filament-static-assets",
-    "description": "Associate files with Eloquent models",
+    "description": "Improved handling of stylesheets and javascript files for Filament",
     "keywords": [
         "hollyit",
         "filament",
