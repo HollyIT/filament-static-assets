@@ -2,6 +2,13 @@
 # Filament Static Asset Handling
 This package aims to solve improve the static asset handling of the amazing Laravel package [Filament](https://filamentphp.com/). 
 
+---
+
+**NOTE:** This package is for Filament served assets only. If you are looking for a general Laravel asset management system that includes
+the same features as this, plus advanced dependency management, then the newly released [Laravel Static Libraries](https://github.com/HollyIT/laravel-static-libraries) might be of interest. 
+
+---
+
 By default Filament serves all static files (js and css) via Laravel. While this method is
 perfectly fine for smaller projects, it can become a performance hit once your project grows.
 To overcome the performance hit, this package will copy all your static assets to a path in
