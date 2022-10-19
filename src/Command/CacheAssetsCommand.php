@@ -51,12 +51,16 @@ class CacheAssetsCommand extends Command
 
     protected function cacheCore()
     {
-
         $response = app(AssetController::class)('app.js');
         File::copy($response->getFile()->getRealPath(), $this->basePath . '/app.js');
 
         $response = app(AssetController::class)('app.css');
         File::copy($response->getFile()->getRealPath(), $this->basePath . '/app.css');
+
+        if (config('filament.broadcasting.echo')) {
+            $response = app(AssetController::class)('echo.js');
+            File::copy($response->getFile()->getRealPath(), $this->basePath . '/echo.js');
+        }
     }
 
 
@@ -70,5 +74,4 @@ class CacheAssetsCommand extends Command
             }
         }
     }
-
 }
