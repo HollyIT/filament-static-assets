@@ -9,10 +9,11 @@ use Illuminate\Support\ServiceProvider;
 class StaticAssetsServiceProvider extends ServiceProvider
 {
 
-    public function register() {
+    public function register()
+    {
         $this->commands([CacheAssetsCommand::class, FlushCachedAssetsCommand::class]);
-        $this->app->extend('filament', function(){
-            return new FilamentStaticManager();
+        $this->app->extend('filament', function ($service, $app) {
+            return new FilamentStaticManager($service);
         });
 
     }
